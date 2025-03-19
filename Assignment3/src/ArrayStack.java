@@ -1,5 +1,5 @@
 
-public class ArrayStack<T> implements StackADT {
+public class ArrayStack<T> implements StackADT<T> {
 	//Instance Variables
 	private T[] array;
 	private int top;
@@ -122,6 +122,7 @@ public class ArrayStack<T> implements StackADT {
 		// TODO Auto-generated method stub
 
 	}
+	
 	
 
 }
