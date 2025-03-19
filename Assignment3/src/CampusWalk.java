@@ -1,3 +1,10 @@
+/*
+CS 1027B Assignment 2
+Name: Felix Ma
+Student Number: 251413859
+Email: fma56@uwo.ca
+Created: March 19, 2025
+*/
 
 public class CampusWalk {
 	private Map map;
@@ -6,7 +13,7 @@ public class CampusWalk {
 	public CampusWalk(String filename, boolean showMap) {
 		try {
 			//Initialize Map object
-			map = new Map(filename);
+			this.map = new Map(filename);
 			if(showMap) {
 				map.showGUI();
 			}else {
@@ -127,7 +134,7 @@ public class CampusWalk {
 	
 	public static void main(String[] args) {
 		Hexagon.TIME_DELAY = 500; // Change speed of animation.
-		String file = "map1.txt"; // Change when trying other maps.
+		String file = "map3.txt"; // Change when trying other maps.
 		CampusWalk walk = new CampusWalk(file, true);
 		String result = walk.findPath();
 		System.out.println(result);

@@ -1,3 +1,10 @@
+/*
+CS 1027B Assignment 2
+Name: Felix Ma
+Student Number: 251413859
+Email: fma56@uwo.ca
+Created: March 19, 2025
+*/
 
 public class ArrayStack<T> implements StackADT<T> {
 	//Instance Variables
@@ -9,8 +16,8 @@ public class ArrayStack<T> implements StackADT<T> {
 		this(10); //Initialize with capacity of 10
 	}
 	public ArrayStack(int initCapacity) {
-		array = (T[]) new Object[initCapacity];
-		top = initCapacity - 1;
+		this.array = (T[]) new Object[initCapacity];
+		this.top = initCapacity - 1;
 	}
 	
 	//Methods
