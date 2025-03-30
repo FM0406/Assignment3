@@ -13,7 +13,7 @@ public class CampusWalk {
 	public CampusWalk(String filename, boolean showMap) {
 		try {
 			//Initialize Map object
-			this.map = new Map(filename);
+			map = new Map(filename);
 			if(showMap) {
 				map.showGUI();
 			}else {
@@ -44,7 +44,7 @@ public class CampusWalk {
 		
 		//1. End cell
 		for(int i = 0; i < 6; i++ ) {
-			if(cell.getNeighbour(i).isEnd()) {
+			if(cell.getNeighbour(i) != null && cell.getNeighbour(i).isEnd()) {
 				return cell.getNeighbour(i);
 			}	
 		}
@@ -102,7 +102,7 @@ public class CampusWalk {
 		Hexagon curr;
 		while(!S.isEmpty() && running) {
 			curr = S.peek();
-			path+=curr.getID();
+			path+=curr.getID() + " ";
 			
 			//If exit cell
 			if(curr.isEnd()) {
@@ -134,7 +134,7 @@ public class CampusWalk {
 	
 	public static void main(String[] args) {
 		Hexagon.TIME_DELAY = 500; // Change speed of animation.
-		String file = "map3.txt"; // Change when trying other maps.
+		String file = "map1.txt"; // Change when trying other maps.
 		CampusWalk walk = new CampusWalk(file, true);
 		String result = walk.findPath();
 		System.out.println(result);
